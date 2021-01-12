@@ -1,5 +1,11 @@
 export const people = [
     {
+        id : "0",
+        name: "Kang",
+        age: 29,
+        gender: "male"
+    },
+    {
         id : "1",
         name: "Yong Sang Yoon",
         age: 28,
@@ -30,3 +36,9 @@ export const people = [
         gender: "male"
     }
 ];
+
+
+export const getById = id => {
+    const filteredPeople = people.filter(person => person.id === String(id));
+    return filteredPeople[0];
+}
